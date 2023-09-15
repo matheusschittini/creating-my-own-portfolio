@@ -16,7 +16,7 @@ const socials = [
   },
   {
     icon: faGithub,
-    url: "https://github.com",
+    url: "https://github.com/matheusschittini",
   },
   {
     icon: faLinkedin,
@@ -64,7 +64,15 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
-            {/* Add social media links based on the `socials` data */}
+              <HStack spacing={4}>
+                {
+                  socials.map((element) => {
+                    return <a href={element.url}>
+                      <FontAwesomeIcon icon={element.icon} size="2x"></FontAwesomeIcon>
+                    </a>
+                  })
+                }
+              </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
