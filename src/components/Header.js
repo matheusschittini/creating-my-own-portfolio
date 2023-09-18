@@ -67,7 +67,7 @@ const Header = () => {
               <HStack spacing={4}>
                 {
                   socials.map((element) => {
-                    return <a href={element.url}>
+                    return <a href={element.url} key={element.url}>
                       <FontAwesomeIcon icon={element.icon} size="2x"></FontAwesomeIcon>
                     </a>
                   })
@@ -76,8 +76,8 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#projects-section">Projects</a>
-              <a href="#contactme-section">Contact Me</a>
+              <a href="#projects-section" onClick={handleClick("projects")}>Projects</a>
+              <a href="#contactme-section" onClick={handleClick("contactme")}>Contact Me</a>
             </HStack>
           </nav>
         </HStack>
