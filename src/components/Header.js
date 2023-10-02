@@ -16,7 +16,7 @@ const socials = [
   },
   {
     icon: faGithub,
-    url: "https://github.com/matheusschittini",
+    url: "https://github.com",
   },
   {
     icon: faLinkedin,
