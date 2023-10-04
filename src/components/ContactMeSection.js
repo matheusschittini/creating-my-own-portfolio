@@ -32,9 +32,9 @@ const LandingSection = () => {
       submit("https://myportfolio.com/pete/contact-me", values);
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email adress').required('Required'),
-      comment: Yup.string().min(25,"Must be at least 25 characters").required('Required')
+      firstName: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email adress").required("Required"),
+      comment: Yup.string().min(25,"Must be at least 25 characters").required("Required")
     }),
   });
 
@@ -57,6 +57,7 @@ const LandingSection = () => {
                 <Input
                   id="firstName"
                   name="firstName"
+                  {...formik.getFieldProps("firstName")}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
@@ -66,12 +67,13 @@ const LandingSection = () => {
                   id="email"
                   name="email"
                   type="email"
+                  {...formik.getFieldProps("email")}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type">
+                <Select id="type" name="type" {...formik.getFieldProps("type")}>
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
                     Open source consultancy session
@@ -85,6 +87,7 @@ const LandingSection = () => {
                   id="comment"
                   name="comment"
                   height={250}
+                  {...formik.getFieldProps("comment")}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
