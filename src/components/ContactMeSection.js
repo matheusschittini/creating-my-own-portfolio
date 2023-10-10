@@ -76,7 +76,7 @@ const LandingSection = () => {
                 <Select id="type" name="type" {...formik.getFieldProps("type")}>
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
-                    Open source consultancy session
+                    Open source consultancy session.
                   </option>
                   <option value="other">Other</option>
                 </Select>
